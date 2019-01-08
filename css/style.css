@@ -14,13 +14,8 @@ header > h1,p {
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  height: 150px;
   margin: auto;
-}
-#lower_container {
-  height: 150px;
-}
-#upper_container {
-  height: 150px;
 }
 #carousel_container {
   display: flex;
