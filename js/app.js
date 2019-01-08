@@ -1,7 +1,7 @@
 $(() => {
 //onload
 
-console.log($);
+
 
 
 //onload

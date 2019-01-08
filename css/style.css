@@ -1,3 +1,38 @@
+*{
+  border:2px solid gold;
+}
 body{
-  background: blue;
+  text-align: center;
+}
+#upper_container, #lower_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+#lower_container {
+  height: 200px;
+}
+#upper_container {
+  height: 300px;
+}
+#carousel_container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 150px;
+  margin: auto;
+  margin-bottom: 200px;
+}
+.card {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  position: relative;
+}
+.button{
+  margin: auto;
+
 }
