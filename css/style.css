@@ -4,6 +4,11 @@
 body{
   text-align: center;
 }
+header > h1,p {
+  width: 80%;
+  margin: 5px auto;
+  padding: 10px;
+}
 #upper_container, #lower_container {
   display: flex;
   justify-content: space-between;
@@ -12,19 +17,18 @@ body{
   margin: auto;
 }
 #lower_container {
-  height: 200px;
+  height: 150px;
 }
 #upper_container {
-  height: 300px;
+  height: 150px;
 }
 #carousel_container {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 30%;
   height: 150px;
   margin: auto;
-  margin-bottom: 200px;
 }
 .card {
   height: 100px;
@@ -35,4 +39,13 @@ body{
 .button{
   margin: auto;
 
+}
+footer > h3 {
+  margin: 5px auto;
+  width: 40%
+}
+#battle_stats, #winner {
+  height: 50px;
+  width: 200px;
+  margin: auto;
 }
