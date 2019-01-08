@@ -9,7 +9,7 @@ $(() => {
       (data) => {
         console.log(data);
         //use a for loop to grab 10 species from api
-        for (var i = 0; i < 10 ; i++) {
+        for (var i = 0; i < 10git  ; i++) {
           console.log(data.results[i]);
 
         }
