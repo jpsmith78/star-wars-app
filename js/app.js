@@ -1,0 +1,8 @@
+$(() => {
+//onload
+
+console.log($);
+
+
+//onload
+})
