@@ -12,12 +12,19 @@ $(() => {
       this.attackpoints = attackpoints;
       this.accuracy = accuracy;
     }
-  }
-  //instatiate weapon
-  const blaster = new Weapon('Blaster',20,20,.7)
-  const lightsaber = new Weapon('Lightsaber',15,25,.5)
-  const crossbow = new Weapon('Crossbow',25,15,.6)
+    // build attack enemy function
+    attackEnemy(enemy){
+      console.log($('#player1_card').text()+' has used his '+[this.name]+' against '+($('#player2_card').text()));
+      }
+    }
 
+  //instatiate weapon
+  const blaster = new Weapon('blaster',20,20,.7)
+  const lightsaber = new Weapon('lightsaber',15,25,.5)
+  const crossbow = new Weapon('crossbow',25,15,.6)
+  //=================================================================
+  // <<<<<<<<<<<<<<<<<<<<<WEAPONS FUNCTIONS>>>>>>>>>>>>>>>>>>>>>>>>>>
+  // ================================================================
   //create functions to import weapon data into player 1 weapon card
   const getBlasterPlayer1 = () => {
     $('#player1_weapons').empty();
@@ -31,7 +38,7 @@ $(() => {
     $('#player1_weapons').empty();
     $('#player1_weapons').append(crossbow.name+': hitpoints:'+crossbow.hitpoints+' attackpoints:'+crossbow.attackpoints+' accuracy:' +crossbow.accuracy);
   }
-  //and player 2 weapon card
+  //and player 2 weapon card>>>>>>>>>>>>>>>>>>>>>>>>
   const getBlasterPlayer2 = () => {
     $('#player2_weapons').empty();
     $('#player2_weapons').append(blaster.name+': hitpoints:'+blaster.hitpoints+' attackpoints:'+blaster.attackpoints+' accuracy:' +blaster.accuracy)
@@ -44,6 +51,9 @@ $(() => {
     $('#player2_weapons').empty();
     $('#player2_weapons').append(crossbow.name+': hitpoints:'+crossbow.hitpoints+' attackpoints:'+crossbow.attackpoints+' accuracy:' +crossbow.accuracy);
   }
+  // ============================================================
+  // <<<<<<<<<<<<<<<<<<<<<<<<<RADIO BUTTONS>>>>>>>>>>>>>>>>>>>>
+  // ============================================================
   // check radio button function
   $("input[type='radio']").on('click',(event) => {
     //create variable to store radio value
@@ -69,6 +79,7 @@ $(() => {
       } else if (radioValue2 === 'crossbow') {
         getCrossBowPlayer2();
       }
+
   })
   //===================================================
   //<<<<<<<<<<<<<<<<<<PROMISE>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -100,7 +111,8 @@ $(() => {
       const numberOfDivs = $('#carousel_divs').children().length-1;
       // console.log(numberOfDivs);
       //======================================================
-      //NEXT BUTTON
+      //<<<<<<<<<<<<<<<<<<<<NEXT BUTTON>>>>>>>>>>>>>>>>>>>>>>
+      //========================================================
       $('#next_button').on('click',() => {
         //hide current div
         $('#carousel_divs').children().eq(currentDivIndex).css('display','none')
@@ -117,7 +129,8 @@ $(() => {
       })
       $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
       //===========================================================
-      //BACK BUTTON
+      //<<<<<<<<<<<<<<<<<<<<<<<<<<BACK BUTTON>>>>>>>>>>>>>>>>>>>>>>>
+      //===============================================================
       $('#back_button').on('click',() => {
         //hide current div
         $('#carousel_divs').children().eq(currentDivIndex).css('display','none')
@@ -142,11 +155,13 @@ $(() => {
           $(event.target).append($('#carousel_divs').children().eq(currentDivIndex))
         }
       })
-    //==========================================
-      })
+    })
 
 
+    $('button').on('click',() => {
+      blaster.attackEnemy()
 
+    })
 
 
 
