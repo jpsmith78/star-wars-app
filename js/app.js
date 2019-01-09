@@ -19,16 +19,32 @@ $(() => {
         $('#carousel_divs').append($carousel_card)
       }
       //create current div counter variable for carousel
-      let currentImageIndex = 0;
+      let currentDivIndex = 0;
       //count how many divs are in the carousel
       const numberOfDivs = $('#carousel_divs').children().length-1;
       console.log(numberOfDivs);
 
+      //next button
+      $('#next_button').on('click',() => {
+        //hide current div
+        $('#carousel_divs').children().eq(currentDivIndex).css('display','none')
+        //increment currentDivIndex if before last index
+        if(currentDivIndex < numberOfDivs){
+          currentDivIndex++
+          $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
+          //or return to zero
+        } else {
+          currentDivIndex = 0;
+          $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
+        }
+      })
+
+      //show next image
+
+
+      //back_button
     }
   )
-
-
-
 
 
 
