@@ -31,18 +31,33 @@ $(() => {
         //increment currentDivIndex if before last index
         if(currentDivIndex < numberOfDivs){
           currentDivIndex++
+          //show next div
           $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
           //or return to zero
         } else {
           currentDivIndex = 0;
+          //show next image
           $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
         }
       })
-
-      //show next image
-
+      $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
 
       //back_button
+      $('#back_button').on('click',() => {
+        //hide current div
+        $('#carousel_divs').children().eq(currentDivIndex).css('display','none')
+        //decrement currentDivIndex if before last index
+        if(currentDivIndex > 0){
+          currentDivIndex--
+          //show previous div
+          $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
+          //or return to zero
+        } else {
+          currentDivIndex = numberOfDivs;
+          //show next image
+          $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
+        }
+      })
     }
   )
 
