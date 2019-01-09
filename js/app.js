@@ -23,6 +23,32 @@ $(() => {
   const lightsaber = new Weapon('lightsaber',15,25,.5)
   const crossbow = new Weapon('crossbow',25,15,.6)
   //=================================================================
+  // <<<<<<<<<<<<<<<<<<<<<PLAYER 1 ATTACK FUNCTION>>>>>>>>>>>>>>>>>>>
+  // ================================================================
+  const playerOneAttack = () => {
+    if($('#player1_weapons').text().includes('blaster')){
+      console.log(blaster.attackEnemy());
+    }else if($('#player1_weapons').text().includes('lightsaber')){
+      console.log(lightsaber.attackEnemy());
+    }else if($('#player1_weapons').text().includes('crossbow')){
+      console.log(crossbow.attackEnemy());
+    }
+  }
+  //=================================================================
+  // <<<<<<<<<<<<<<<<<<<<<PLAYER 2 ATTACK FUNCTION>>>>>>>>>>>>>>>>>>>
+  // ================================================================
+  const playerTwoAttack = () => {
+    if($('#player2_weapons').text().includes('blaster')){
+      console.log(blaster.attackEnemy());
+    }else if($('#player2_weapons').text().includes('lightsaber')){
+      console.log(lightsaber.attackEnemy());
+    }else if($('#player2_weapons').text().includes('crossbow')){
+      console.log(crossbow.attackEnemy());
+    }
+  }
+
+
+  //=================================================================
   // <<<<<<<<<<<<<<<<<<<<<WEAPONS FUNCTIONS>>>>>>>>>>>>>>>>>>>>>>>>>>
   // ================================================================
   //create functions to import weapon data into player 1 weapon card
@@ -156,11 +182,20 @@ $(() => {
         }
       })
     })
-
-
+    //create counter variable to alternate click listener function
+    let counter = 0;
+    //=========================================================
+    //<<<<<<<<<<<<<<<<<<<<ATTACK BUTTON>>>>>>>>>>>>>>>>>>>
+    //=========================================================
     $('button').on('click',() => {
-      blaster.attackEnemy()
 
+      counter++;
+      console.log(counter);
+      if(counter %2 !== 0){
+        playerOneAttack()
+      } else{
+        playerTwoAttack()
+      }
     })
 
 
