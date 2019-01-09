@@ -16,26 +16,60 @@ $(() => {
   }
   //instatiate weapon
   const blaster = new Weapon('Blaster',20,20,.7)
-
-
-
-
-
+  const lightsaber = new Weapon('Lightsaber',15,25,.5)
+  const crossbow = new Weapon('Crossbow',25,15,.6)
+  //create functions to import weapon data into player 1 weapon card
+  const getBlasterPlayer1 = () => {
+    $('#player1_weapons').empty();
+    $('#player1_weapons').append(blaster.name+': hitpoints:'+blaster.hitpoints+' attackpoints:'+blaster.attackpoints+' accuracy:' +blaster.accuracy)
+  }
+  const getLightsaberPlayer1 = () => {
+    $('#player1_weapons').empty();
+    $('#player1_weapons').append(lightsaber.name+': hitpoints:'+lightsaber.hitpoints+' attackpoints:'+lightsaber.attackpoints+' accuracy:' +lightsaber.accuracy)
+  }
+  const getCrossBowPlayer1 = () => {
+    $('#player1_weapons').empty();
+    $('#player1_weapons').append(crossbow.name+': hitpoints:'+crossbow.hitpoints+' attackpoints:'+crossbow.attackpoints+' accuracy:' +crossbow.accuracy);
+  }
+  //and player 2 weapon card
+  const getBlasterPlayer2 = () => {
+    $('#player2_weapons').empty();
+    $('#player2_weapons').append(blaster.name+': hitpoints:'+blaster.hitpoints+' attackpoints:'+blaster.attackpoints+' accuracy:' +blaster.accuracy)
+  }
+  const getLightsaberPlayer2 = () => {
+    $('#player2_weapons').empty();
+    $('#player2_weapons').append(lightsaber.name+': hitpoints:'+lightsaber.hitpoints+' attackpoints:'+lightsaber.attackpoints+' accuracy:' +lightsaber.accuracy)
+  }
+  const getCrossBowPlayer2 = () => {
+    $('#player2_weapons').empty();
+    $('#player2_weapons').append(crossbow.name+': hitpoints:'+crossbow.hitpoints+' attackpoints:'+crossbow.attackpoints+' accuracy:' +crossbow.accuracy);
+  }
   // check radio button function
   $("input[type='radio']").on('click',(event) => {
     //create variable to store radio value
+    //radio buttons courtesy of stack overflow and Mark DeMay
     let radioValue =
-    $('input[name="weapons"]:checked').val()
+    $('input[name="weapons1"]:checked').val()
     //use if else statemtn to push weapon data into player1 weapons card
         if (radioValue === 'blaster') {
-        console.log(radioValue);
-        $('#player1_weapons').empty();
-        $('#player1_weapons').append(blaster.name+': hitpoints:'+blaster.hitpoints+' attackpoints:'+blaster.attackpoints+' accuracy:' +blaster.accuracy)
-      } 
+        getBlasterPlayer1();
+      } else if(radioValue === 'lightsaber'){
+        getLightsaberPlayer1();
+      } else if (radioValue === 'crossbow') {
+        getCrossBowPlayer1();
+      }
 
-
+    let radioValue2 =
+    $('input[name="weapons2"]:checked').val()
+    //use if else statemtn to push weapon data into player1 weapons card
+        if (radioValue2 === 'blaster') {
+        getBlasterPlayer2();
+      } else if(radioValue2 === 'lightsaber'){
+        getLightsaberPlayer2();
+      } else if (radioValue2 === 'crossbow') {
+        getCrossBowPlayer2();
+      }
   })
-
   //===================================================
   //<<<<<<<<<<<<<<<<<<PROMISE>>>>>>>>>>>>>>>>>>>>>>>>>>
   //===================================================
