@@ -25,7 +25,7 @@ header > h1,p {
   height: 150px;
   margin: auto;
 }
-.card {
+.carousel_card, .card {
   height: 100px;
   width: 100px;
   margin: auto;
