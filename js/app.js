@@ -1,9 +1,18 @@
 $(() => {
 //onload
-//create pick random variable
-
-
-
+  //===================================================
+  //<<<<<<<<<<<<CREATE WEAPON CLASS>>>>>>>>>>>>>>>>>
+  //===================================================
+  class Weapon {
+    constructor(name,hitpoints,attackpoints,accuracy){
+      this.name = name;
+      this.hitpoints = hitpoints;
+      this.attackpoints = attackpoints;
+      this.accuracy = accuracy;
+    }
+  }
+  const blaster = new Weapon('Blaster',20,20,20)
+  $('#player_weapons').append(blaster.name+ ':  accuracy:' +blaster.accuracy+', hitpoints:'+blaster.hitpoints+', attackpoints:'+blaster.attackpoints)
   //===================================================
   //<<<<<<<<<<<<<<<<<<PROMISE>>>>>>>>>>>>>>>>>>>>>>>>>>
   //===================================================
@@ -78,8 +87,6 @@ $(() => {
         }
       })
     //==========================================
-
-
       })
 
 
