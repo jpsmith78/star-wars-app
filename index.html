@@ -28,8 +28,16 @@
         <div class="player_card" id ="player2_card"></div>
       </div>
       <div id="lower_container">
-        <div class="card" id="player_weapons"></div>
-        <div class="card" id="computer_weapons"></div>
+        <div class="weapon_card" id="player1_weapons"></div>
+        <form>
+          <h3>Weapons</h3>
+          <!-- I used w3 schools & stack overflow to learn to use radio buttons -->
+          <input type="radio" name="weapons" value="blaster">Blaster<br>
+          <input type="radio" name="weapons" value="lightsaber">Lightsaber<br>
+          <input type="radio" name="weapons" value="crossbow">Crossbow
+          <input type="submit" id="radio_button">
+        </form>
+        <div class="weapon_card" id="player2_weapons"></div>
       </div>
       <footer>
           <h3>Battle Stats</h3>

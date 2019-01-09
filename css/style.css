@@ -29,7 +29,7 @@ header > h1,p {
   height: 120px;
   width: 120px;
 }
-.carousel_card, .player_card, .card {
+.carousel_card, .player_card, .weapon_card {
   height: 100px;
   width: 100px;
   margin: auto;

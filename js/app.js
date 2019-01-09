@@ -1,8 +1,11 @@
 $(() => {
 //onload
+
+
   //===================================================
   //<<<<<<<<<<<<CREATE WEAPON CLASS>>>>>>>>>>>>>>>>>
   //===================================================
+  //create weapon class with name, hitpoints, attackpoints and accuracy
   class Weapon {
     constructor(name,hitpoints,attackpoints,accuracy){
       this.name = name;
@@ -11,8 +14,22 @@ $(() => {
       this.accuracy = accuracy;
     }
   }
-  const blaster = new Weapon('Blaster',20,20,20)
-  $('#player_weapons').append(blaster.name+ ':  accuracy:' +blaster.accuracy+', hitpoints:'+blaster.hitpoints+', attackpoints:'+blaster.attackpoints)
+  //instatiate weapon
+  const blaster = new Weapon('Blaster',20,20,.7)
+
+
+
+  // check radio button function
+  $('#radio_button').on('click',(event) => {
+    event.preventDefault();
+
+    if($('input[value="blaster"].checked')){
+      $('#player1_weapons').append(blaster.name+': hitpoints:'+blaster.hitpoints+' attackpoints:'+blaster.attackpoints+' accuracy:' +blaster.accuracy)
+    }
+
+
+  })
+
   //===================================================
   //<<<<<<<<<<<<<<<<<<PROMISE>>>>>>>>>>>>>>>>>>>>>>>>>>
   //===================================================
