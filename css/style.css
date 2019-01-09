@@ -31,6 +31,9 @@ header > h1,p {
   margin: auto;
   position: relative;
 }
+.carousel_card {
+  display: none;
+}
 .button{
   margin: auto;
 
