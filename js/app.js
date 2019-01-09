@@ -19,13 +19,19 @@ $(() => {
 
 
 
-  // check radio button function
-  $('#radio_button').on('click',(event) => {
-    event.preventDefault();
 
-    if($('input[value="blaster"].checked')){
-      $('#player1_weapons').append(blaster.name+': hitpoints:'+blaster.hitpoints+' attackpoints:'+blaster.attackpoints+' accuracy:' +blaster.accuracy)
-    }
+
+  // check radio button function
+  $("input[type='radio']").on('click',(event) => {
+    //create variable to store radio value
+    let radioValue =
+    $('input[name="weapons"]:checked').val()
+    //use if else statemtn to push weapon data into player1 weapons card
+        if (radioValue === 'blaster') {
+        console.log(radioValue);
+        $('#player1_weapons').empty();
+        $('#player1_weapons').append(blaster.name+': hitpoints:'+blaster.hitpoints+' attackpoints:'+blaster.attackpoints+' accuracy:' +blaster.accuracy)
+      } 
 
 
   })
