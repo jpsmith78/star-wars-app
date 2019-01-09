@@ -1,7 +1,6 @@
 $(() => {
 //onload
 
-
   //===================================================
   //<<<<<<<<<<<<CREATE WEAPON CLASS>>>>>>>>>>>>>>>>>
   //===================================================
@@ -18,6 +17,7 @@ $(() => {
   const blaster = new Weapon('Blaster',20,20,.7)
   const lightsaber = new Weapon('Lightsaber',15,25,.5)
   const crossbow = new Weapon('Crossbow',25,15,.6)
+
   //create functions to import weapon data into player 1 weapon card
   const getBlasterPlayer1 = () => {
     $('#player1_weapons').empty();
@@ -109,7 +109,6 @@ $(() => {
           currentDivIndex++
           //show next div
           $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
-          //or return to zero
         } else {
           currentDivIndex = 0;
           //show next image
