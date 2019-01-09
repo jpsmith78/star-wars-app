@@ -1,11 +1,14 @@
 $(() => {
 //onload
+//create pick random variable
 
-  //==================================================
+
+
+  //===================================================
   //<<<<<<<<<<<<<<<<<<PROMISE>>>>>>>>>>>>>>>>>>>>>>>>>>
   //===================================================
   //use ajax to access star wars api
-  $.ajax({
+  const promise = $.ajax({
       url:"https://swapi.co/api/people/?page=2"
   }).then(
     (data) => {
@@ -19,16 +22,18 @@ $(() => {
         //append carousel card to carousel images div
         $('#carousel_divs').append($carousel_card)
       }
-      //==================================================
-      //<<<<<<<<<<<<<<<<<CAROUSEL BUTTON>>>>>>>>>>>>>>>>>>>
-      //==================================================
+      //====================================================
+      //<<<<<<<<<<<<<<<<<CAROUSEL BUTTONS>>>>>>>>>>>>>>>>>>>
+      //====================================================
 
       //create current div counter variable for carousel
       let currentDivIndex = 0;
+
+      let randomNum = Math.floor(Math.random()*9)
       //count how many divs are in the carousel
       const numberOfDivs = $('#carousel_divs').children().length-1;
       // console.log(numberOfDivs);
-
+      //======================================================
       //NEXT BUTTON
       $('#next_button').on('click',() => {
         //hide current div
@@ -46,7 +51,7 @@ $(() => {
         }
       })
       $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
-
+      //===========================================================
       //BACK BUTTON
       $('#back_button').on('click',() => {
         //hide current div
@@ -63,14 +68,20 @@ $(() => {
           $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
         }
       })
-      $('#player_card').on('click',(event) => {
+      //=========================================================
+      //<<<<<<<<<<<<<<<<<<<PLAYER CARDS>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      //=========================================================
+      //make event handler for player card to move a carousel div to it
+      $('.player_card').on('click',(event) => {
         if($(event.target).text()==''){
           $(event.target).append($('#carousel_divs').children().eq(currentDivIndex))
         }
+      })
+    //==========================================
+
 
       })
-    }
-  )
+
 
 
 
