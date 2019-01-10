@@ -126,8 +126,8 @@ $(() => {
     $('#attack').off('click')
     $('#winner').empty();
     $('#winner').append('The Winner is '+($('#player1_card').text())+'!')
-    $('#winner').append($('<button>').text('Play Again?').attr('id','restart_button'))
-    $('#restart_button').on('click',restart);
+    $('#winner').append($('<button>').text('Play Again?').attr('id','restart'))
+    $('#restart').on('click',restart);
 
   }
   //=================================================================

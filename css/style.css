@@ -18,17 +18,16 @@ header > h1,p {
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<UPPER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
-#upper_container, #lower_container {
+#upper_container, #lower_container, #game {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80%;
   height: 400px;
   margin: auto;
-}
-#upper_container {
   flex-wrap: wrap;
 }
+
 #upper_top, #upper_bottom {
   display: flex;
   justify-content: center;
@@ -89,26 +88,32 @@ header > h1,p {
   width: 100%;
   margin: 5px;
 }
-#player1_form, #player2_form {
-  width: 49%;
+#lower_top, #lower_bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  height: 40%;
+  margin: auto;
+  flex-direction: row;
   margin: 0 auto;
 }
-#player1_weapons, #player2_weapons {
 
-  margin: auto;
-
-}
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<GAME>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
 #game > h3 {
   margin: 5px auto;
-  width: 40%
+  width: 90%;
 }
 #play_game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 200px;
   width: 70%;
   margin: auto;
+  flex-direction: column;
 }
 #battle_stats, #hitpoint_report {
   height: 70px;
@@ -125,11 +130,19 @@ header > h1,p {
   margin: auto;
   padding: 5%;
 }
-#reset_button
+#attack, #restart {
+  height: 25px;
+  width: 75px;
+
+}
+
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<FOOTER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
 footer > h4 {
   margin: 5px auto;
   width: 40%
+}
+#game {
+  height: 600px;
 }

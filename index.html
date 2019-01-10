@@ -18,7 +18,6 @@
         <h1>Star Wars Battle!</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </header>
-
       <div id="upper_container">
         <h2>Choose Your Character</h2>
         <div id="upper_top">
@@ -35,24 +34,28 @@
       </div>
       <div id="lower_container">
         <h2>Choose Your Weapon</h2>
-        <form id='player1_form'>
-          <h3>Player 1 Weapons</h3>
-          <input type="radio" name="weapons1" value="blaster">Blaster<br>
-          <input type="radio" name="weapons1" value="lightsaber">Lightsaber<br>
-          <input type="radio" name="weapons1" value="crossbow">Crossbow<br>
-        </form>
-        <form id='player2_form'>
-          <h3>Player 2 Weapons</h3>
-          <input type="radio" name="weapons2" value="blaster">Blaster<br>
-          <input type="radio" name="weapons2" value="lightsaber">Lightsaber<br>
-          <input type="radio" name="weapons2" value="crossbow">Crossbow
-        </form>
-        <div class="weapon_card" id="player1_weapons"></div>
-        <div class="weapon_card" id="player2_weapons"></div></div>
+        <div id="lower_top">
+          <form id='player1_form'>
+            <h3>Player 1 Weapons</h3>
+            <input type="radio" name="weapons1" value="blaster">Blaster<br>
+            <input type="radio" name="weapons1" value="lightsaber">Lightsaber<br>
+            <input type="radio" name="weapons1" value="crossbow">Crossbow<br>
+          </form>
+          <form id='player2_form'>
+            <h3>Player 2 Weapons</h3>
+            <input type="radio" name="weapons2" value="blaster">Blaster<br>
+            <input type="radio" name="weapons2" value="lightsaber">Lightsaber<br>
+            <input type="radio" name="weapons2" value="crossbow">Crossbow
+          </form>
+        </div>
+        <div id="lower_bottom">
+          <div class="weapon_card" id="player1_weapons"></div>
+          <div class="weapon_card" id="player2_weapons"></div></div>
+        </div>
       <div id="game">
         <h3>Play the Game</h3>
         <div id="play_game">
-          <button type="button" id="attack"></button>
+          <button type="button" id="attack">Attack</button>
           <div id="battle_stats"></div>
           <div id="hitpoint_report"></div>
         </div>
