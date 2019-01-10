@@ -13,8 +13,11 @@ $(() => {
       this.accuracy = accuracy;
     }
     // build attack enemy function
-    attackEnemy(enemy){
+    playerOneAttackEnemy(enemy){
       console.log($('#player1_card').text()+' has used his '+[this.name]+' against '+($('#player2_card').text()));
+      }
+    playerTwoAttackEnemy(enemy){
+      console.log($('#player2_card').text()+' has used his '+[this.name]+' against '+($('#player1_card').text()));
       }
     }
 
@@ -27,11 +30,11 @@ $(() => {
   // ================================================================
   const playerOneAttack = () => {
     if($('#player1_weapons').text().includes('blaster')){
-      console.log(blaster.attackEnemy());
+      console.log(blaster.playerOneAttackEnemy());
     }else if($('#player1_weapons').text().includes('lightsaber')){
-      console.log(lightsaber.attackEnemy());
+      console.log(lightsaber.playerOneAttackEnemy());
     }else if($('#player1_weapons').text().includes('crossbow')){
-      console.log(crossbow.attackEnemy());
+      console.log(crossbow.playerOneAttackEnemy());
     }
   }
   //=================================================================
@@ -39,11 +42,11 @@ $(() => {
   // ================================================================
   const playerTwoAttack = () => {
     if($('#player2_weapons').text().includes('blaster')){
-      console.log(blaster.attackEnemy());
+      console.log(blaster.playerTwoAttackEnemy());
     }else if($('#player2_weapons').text().includes('lightsaber')){
-      console.log(lightsaber.attackEnemy());
+      console.log(lightsaber.playerTwoAttackEnemy());
     }else if($('#player2_weapons').text().includes('crossbow')){
-      console.log(crossbow.attackEnemy());
+      console.log(crossbow.playerTwoAttackEnemy());
     }
   }
 
