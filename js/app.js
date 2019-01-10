@@ -12,12 +12,57 @@ $(() => {
       this.attackpoints = attackpoints;
       this.accuracy = accuracy;
     }
-    // build attack enemy function
+    //=========================================================
+    //<<<<<<<<<<<<<<<<<<<<PLAYER 1 ATTACK FUNCTION>>>>>>>>>>>>>
+    //==========================================================
     playerOneAttackEnemy(enemy){
-      console.log($('#player1_card').text()+' has used his '+[this.name]+' against '+($('#player2_card').text()));
+      if(Math.random() <= this.accuracy){
+          console.log($('#player1_card').text()+' has successfully used his '+[this.name]+' against '+($('#player2_card').text()));
+          //make if statement to determine the hitpoints of the enemy and subtract attackpoint from that
+          if($('#player2_weapons').text().includes('blaster')){
+            console.log($('#player2_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
+          }else if ($('#player2_weapons').text().includes('lightsaber')){
+            console.log($('#player2_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
+          }else if ($('#player2_weapons').text().includes('crossbow')){
+            console.log($('#player2_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
+          }
+        }else{
+          console.log($('#player1_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player2_card').text()));
+          //make if statement to determine the hitpoints of the enemy
+          if($('#player2_weapons').text().includes('blaster')){
+            console.log($('#player2_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
+          }else if ($('#player2_weapons').text().includes('lightsaber')){
+            console.log($('#player2_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
+          }else if ($('#player2_weapons').text().includes('crossbow')){
+            console.log($('#player2_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
+          }
+        }
       }
+    //=========================================================
+    //<<<<<<<<<<<<<<<<<<<<PLAYER 2 ATTACK FUNCTION>>>>>>>>>>>>>
+    //==========================================================
     playerTwoAttackEnemy(enemy){
-      console.log($('#player2_card').text()+' has used his '+[this.name]+' against '+($('#player1_card').text()));
+      if(Math.random()<= this.accuracy){
+          console.log($('#player2_card').text()+' has successfully used his '+[this.name]+' against '+($('#player1_card').text())+' for '+[this.attackpoints]+' damage');
+          //make if statement to determine the hitpoints of the enemy and subtract attackpoint from that
+          if($('#player1_weapons').text().includes('blaster')){
+            console.log($('#player1_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
+          }else if ($('#player1_weapons').text().includes('lightsaber')){
+            console.log($('#player1_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
+          }else if ($('#player1_weapons').text().includes('crossbow')){
+            console.log($('#player1_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
+          }
+        }else{
+          console.log($('#player2_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player1_card').text()));
+          //make if statement to determine the hitpoints of the enemy
+          if($('#player1_weapons').text().includes('blaster')){
+            console.log($('#player1_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
+          }else if ($('#player1_weapons').text().includes('lightsaber')){
+            console.log($('#player1_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
+          }else if ($('#player1_weapons').text().includes('crossbow')){
+            console.log($('#player1_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
+          }
+        }
       }
     }
 
@@ -181,15 +226,17 @@ $(() => {
       //make event handler for player card to move a carousel div to it
       $('.player_card').on('click',(event) => {
         if($(event.target).text()==''){
-          $(event.target).append($('#carousel_divs').children().eq(currentDivIndex))
+          $(event.target).append($('#carousel_divs').children().eq(currentDivIndex).clone())
         }
       })
     })
-    //create counter variable to alternate click listener function
-    let counter = 0;
+
     //=========================================================
     //<<<<<<<<<<<<<<<<<<<<ATTACK BUTTON>>>>>>>>>>>>>>>>>>>
     //=========================================================
+    //create counter variable to alternate click listener function
+    let counter = 0;
+
     $('button').on('click',() => {
 
       counter++;
