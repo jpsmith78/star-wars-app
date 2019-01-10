@@ -16,25 +16,26 @@ $(() => {
     //<<<<<<<<<<<<<<<<<<<<PLAYER 1 ATTACK FUNCTION>>>>>>>>>>>>>
     //==========================================================
     playerOneAttackEnemy(enemy){
+      $('#battle_stats').empty();
       if(Math.random() <= this.accuracy){
-          console.log($('#player1_card').text()+' has successfully used his '+[this.name]+' against '+($('#player2_card').text()));
+          $('#battle_stats').append($('#player1_card').text()+' has successfully used his '+[this.name]+' against '+($('#player2_card').text()));
           //make if statement to determine the hitpoints of the enemy and subtract attackpoint from that
           if($('#player2_weapons').text().includes('blaster')){
-            console.log($('#player2_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player2_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }else if ($('#player2_weapons').text().includes('lightsaber')){
-            console.log($('#player2_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player2_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }else if ($('#player2_weapons').text().includes('crossbow')){
-            console.log($('#player2_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player2_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }
         }else{
-          console.log($('#player1_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player2_card').text()));
+          $('#battle_stats').append($('#player1_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player2_card').text()));
           //make if statement to determine the hitpoints of the enemy
           if($('#player2_weapons').text().includes('blaster')){
-            console.log($('#player2_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player2_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
           }else if ($('#player2_weapons').text().includes('lightsaber')){
-            console.log($('#player2_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player2_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
           }else if ($('#player2_weapons').text().includes('crossbow')){
-            console.log($('#player2_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player2_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
           }
         }
       }
@@ -42,34 +43,35 @@ $(() => {
     //<<<<<<<<<<<<<<<<<<<<PLAYER 2 ATTACK FUNCTION>>>>>>>>>>>>>
     //==========================================================
     playerTwoAttackEnemy(enemy){
+      $('#battle_stats').empty();
       if(Math.random()<= this.accuracy){
-          console.log($('#player2_card').text()+' has successfully used his '+[this.name]+' against '+($('#player1_card').text())+' for '+[this.attackpoints]+' damage');
+          $('#battle_stats').append($('#player2_card').text()+' has successfully used his '+[this.name]+' against '+($('#player1_card').text())+' for '+[this.attackpoints]+' damage');
           //make if statement to determine the hitpoints of the enemy and subtract attackpoint from that
           if($('#player1_weapons').text().includes('blaster')){
-            console.log($('#player1_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player1_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }else if ($('#player1_weapons').text().includes('lightsaber')){
-            console.log($('#player1_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player1_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }else if ($('#player1_weapons').text().includes('crossbow')){
-            console.log($('#player1_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player1_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }
         }else{
-          console.log($('#player2_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player1_card').text()));
+          $('#battle_stats').append($('#player2_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player1_card').text()));
           //make if statement to determine the hitpoints of the enemy
           if($('#player1_weapons').text().includes('blaster')){
-            console.log($('#player1_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player1_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
           }else if ($('#player1_weapons').text().includes('lightsaber')){
-            console.log($('#player1_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player1_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
           }else if ($('#player1_weapons').text().includes('crossbow')){
-            console.log($('#player1_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
+            $('#battle_stats').append($('#player1_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
           }
         }
       }
     }
 
   //instatiate weapon
-  const blaster = new Weapon('blaster',20,20,.7)
-  const lightsaber = new Weapon('lightsaber',15,25,.5)
-  const crossbow = new Weapon('crossbow',25,15,.6)
+  const blaster = new Weapon('blaster',60,10,.75)
+  const lightsaber = new Weapon('lightsaber',40,20,.50)
+  const crossbow = new Weapon('crossbow',50,15,.66)
   //=================================================================
   // <<<<<<<<<<<<<<<<<<<<<PLAYER 1 ATTACK FUNCTION>>>>>>>>>>>>>>>>>>>
   // ================================================================
