@@ -29,8 +29,8 @@ p {
   margin: auto;
 }
 #carousel_divs {
-  height: 120px;
-  width: 120px;
+  height: 150px;
+  width: 150px;
 }
 .carousel_card, .player_card, .weapon_card {
   height: 150px;

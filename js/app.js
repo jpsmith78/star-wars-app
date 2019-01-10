@@ -96,7 +96,7 @@ $(() => {
   const playerTwoLightsaber = new Weapon('lightsaber',40,20,.50)
   const playerTwoCrossbow = new Weapon('crossbow',50,15,.66)
   //=================================================================
-  // <<<<<<<<<<<<<<<<<<<<<PLAYER 1 ATTACK FUNCTION>>>>>>>>>>>>>>>>>>>
+  // <<<<<<<<<<<<<<<<<<<<<PLAYER 1 ATTACK >>>>>>>>>>>>>>>>>>>>>>>>>
   // ================================================================
   const playerOneAttack = () => {
     if($('#player1_weapons').text().includes('blaster')){
@@ -108,7 +108,7 @@ $(() => {
     }
   }
   //=================================================================
-  // <<<<<<<<<<<<<<<<<<<<<PLAYER 2 ATTACK FUNCTION>>>>>>>>>>>>>>>>>>>
+  // <<<<<<<<<<<<<<<<<<<<<PLAYER 2 ATTACK >>>>>>>>>>>>>>>>>>>>>>>>
   // ================================================================
   const playerTwoAttack = () => {
     if($('#player2_weapons').text().includes('blaster')){
@@ -125,13 +125,27 @@ $(() => {
   const playerOneWins = () => {
     $('#winner').empty();
     $('#winner').append($('#player1_card').text())
+    $('#winner').append($('<button>').text('Play Again?').attr('id','restart_button'))
+    $('#restart_button').on('click',restart);
+
   }
   //=================================================================
   // <<<<<<<<<<<<<<<<<<<<<PLAYER 2 WINS FUNCTION>>>>>>>>>>>>>>>>>>>
   // ================================================================
   const playerTwoWins = () => {
     $('#winner').empty();
-    $('#winner').append($('#player1_card').text())
+    $('#winner').append($('#player2_card').text())
+    $('#winner').append($('<button>').text('Play Again?').attr('id','restart_button'))
+    $('#restart_button').on('click',() => {
+      console.log('hi');
+    })
+  }
+  //=================================================================
+  // <<<<<<<<<<<<<<<<<<<<<RESTART >>>>>>>>>>>>>>>>>>>
+  // ================================================================
+  const restart = () => {
+    $('#player1_card').empty();
+    $('#player2_card').empty();
   }
   //=================================================================
   // <<<<<<<<<<<<<<<<<<<<<WEAPONS FUNCTIONS>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -273,9 +287,8 @@ $(() => {
     //=========================================================
     //create counter variable to alternate click listener function
     let counter = 0;
-
-    $('button').on('click',() => {
-
+    //create vent listener for attack button
+    $('#attack').on('click',() => {
       counter++;
       console.log(counter);
       if(counter %2 !== 0){
@@ -284,6 +297,7 @@ $(() => {
         playerTwoAttack()
       }
     })
+
 
 
 
