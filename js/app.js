@@ -20,7 +20,7 @@ $(() => {
       $('#hitpoint_report').empty();
       if(Math.random() <= this.accuracy){
           $('#battle_stats').append($('#player1_card').text()+' has successfully used his '+[this.name]+' against '+($('#player2_card').text())+' for '+[this.attackpoints]+' damage');
-          //make if statement to determine the hitpoints of the enemy and subtract attackpoint from that
+          //make if else statement to determine the hitpoints of the enemy and subtract attackpoint from that
           if($('#player2_weapons').text().includes('blaster')){
             $('#hitpoint_report').append($('#player2_card').text()+' has '+[playerTwoBlaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
             if(playerTwoBlaster.hitpoints <= 0){
@@ -57,7 +57,7 @@ $(() => {
         $('#hitpoint_report').empty();
       if(Math.random()<= this.accuracy){
           $('#battle_stats').append($('#player2_card').text()+' has successfully used his '+[this.name]+' against '+($('#player1_card').text())+' for '+[this.attackpoints]+' damage');
-          //make if statement to determine the hitpoints of the enemy and subtract attackpoint from that
+          //make if else statement to determine the hitpoints of the enemy and subtract attackpoint from that
           if($('#player1_weapons').text().includes('blaster')){
             $('#hitpoint_report').append($('#player1_card').text()+' has '+[playerOneBlaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
             if(playerOneBlaster.hitpoints <= 0){
@@ -125,7 +125,7 @@ $(() => {
   const playerOneWins = () => {
     $('#attack').off('click')
     $('#winner').empty();
-    $('#winner').append($('#player1_card').text())
+    $('#winner').append('The Winner is '+($('#player1_card').text())+'!')
     $('#winner').append($('<button>').text('Play Again?').attr('id','restart_button'))
     $('#restart_button').on('click',restart);
 
@@ -136,7 +136,7 @@ $(() => {
   const playerTwoWins = () => {
     $('#attack').off('click')
     $('#winner').empty();
-    $('#winner').append($('#player2_card').text())
+    $('#winner').append('The Winner is '+($('#player2_card').text())+'!')
     $('#winner').append($('<button>').text('Play Again?').attr('id','restart_button'))
     $('#restart_button').on('click',restart);
   }

@@ -3,6 +3,9 @@
 }
 body{
   text-align: center;
+  background: black;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
 }
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<HEADER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -12,27 +15,36 @@ header > h1,p {
   margin: 5px auto;
   padding: 10px;
 }
-p {
-  background: black;
-  color: #feda4a;
-  font-family: 'Pathway Gothic One', sans-serif;
-}
 /* ========================================================
-<<<<<<<<<<<<<<<<<<<<CAROUSEL>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<UPPER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
-#carousel_container {
+#upper_container, #lower_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+}
+#upper_container {
+  flex-wrap: wrap;
+}
+#upper_top, #upper_bottom {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
-  height: 150px;
+  width: 95%;
+  height: 40%;
   margin: auto;
+  flex-direction: row;
 }
-#carousel_divs {
-  height: 150px;
-  width: 150px;
+.player_card, .weapon_card {
+  background: gray;
 }
-.carousel_card, .player_card, .weapon_card {
+#upper_container > h2 {
+  margin:  auto;
+}
+.player_card, .weapon_card {
   height: 150px;
   width: 150px;
   margin: auto;
@@ -43,30 +55,49 @@ p {
   border-radius: 5%;
 
 }
+/* ========================================================
+<<<<<<<<<<<<<<<<<<<<CAROUSEL>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+======================================================== */
+#carousel_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 150px;
+  margin: auto;
+}
+#carousel_divs {
+  height: 150px;
+  width: 150px;
+}
+
 .carousel_card {
   display: none;
+
 }
 .button{
   margin: auto;
 }
-/* ========================================================
-<<<<<<<<<<<<<<<<<<<<UPPER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
-======================================================== */
-#upper_container, #lower_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  height: 200px;
-  margin: auto;
-}
-.player_card, .weapon_card {
-  background: gray;
-}
+
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<LOWER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
+#lower_container {
+  flex-wrap: wrap;
+}
+#lower_container > h2 {
+  width: 100%;
+  margin: 5px;
+}
+#player1_form, #player2_form {
+  width: 49%;
+  margin: 0 auto;
+}
+#player1_weapons, #player2_weapons {
 
+  margin: auto;
+
+}
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<GAME>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
@@ -85,10 +116,16 @@ p {
   margin: auto;
 }
 #winner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   height: 100px;
   width: 40%;
   margin: auto;
+  padding: 5%;
 }
+#reset_button
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<FOOTER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */

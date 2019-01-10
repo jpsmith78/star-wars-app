@@ -15,20 +15,26 @@
   <body>
     <div id="outer_container">
       <header>
-        <h1>Star Wars Fight!</h1>
+        <h1>Star Wars Battle!</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </header>
-      <div id="carousel_container">
-        <div class="button" id="back_button">back</div>
-        <div id="carousel_divs"></div>
-        <div class="button" id="next_button">next</div>
-      </div>
+
       <div id="upper_container">
-        <div class="player_card" id="player1_card"></div>
-        <div class="player_card" id ="player2_card"></div>
+        <h2>Choose Your Character</h2>
+        <div id="upper_top">
+          <div id="carousel_container">
+            <div class="button" id="back_button">back</div>
+            <div id="carousel_divs"></div>
+            <div class="button" id="next_button">next</div>
+          </div>
+        </div>
+        <div id="upper_bottom">
+          <div class="player_card" id="player1_card"></div>
+          <div class="player_card" id ="player2_card"></div>
+        </div>
       </div>
       <div id="lower_container">
-        <div class="weapon_card" id="player1_weapons"></div>
+        <h2>Choose Your Weapon</h2>
         <form id='player1_form'>
           <h3>Player 1 Weapons</h3>
           <input type="radio" name="weapons1" value="blaster">Blaster<br>
@@ -41,6 +47,7 @@
           <input type="radio" name="weapons2" value="lightsaber">Lightsaber<br>
           <input type="radio" name="weapons2" value="crossbow">Crossbow
         </form>
+        <div class="weapon_card" id="player1_weapons"></div>
         <div class="weapon_card" id="player2_weapons"></div></div>
       <div id="game">
         <h3>Play the Game</h3>
