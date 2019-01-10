@@ -151,7 +151,24 @@ $(() => {
     $('#player2_card').empty();
     $('#player1_weapons').empty();
     $('#player2_weapons').empty();
-
+    $('#player1_form').css('display','block')
+    $('#player2_form').css('display','block')
+    playerOneBlaster.hitpoints = 60;
+    playerOneLightsaber.hitpoints = 40;
+    playerOneCrossbow.hitpoints = 50;
+    playerTwoBlaster.hitpoints = 60;
+    playerTwoLightsaber.hitpoints = 40;
+    playerTwoCrossbow.hitpoints = 50;
+    $('#attack').on('click',() => {
+      $('#player1_form').css('display','none')
+      $('#player2_form').css('display','none')
+      counter++;
+      if(counter %2 !== 0){
+        playerOneAttack()
+      } else{
+        playerTwoAttack()
+      }
+    })
   }
   //=================================================================
   // <<<<<<<<<<<<<<<<<<<<<WEAPONS FUNCTIONS>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -296,6 +313,8 @@ $(() => {
     let counter = 0;
     //create vent listener for attack button
     $('#attack').on('click',() => {
+      $('#player1_form').css('display','none')
+      $('#player2_form').css('display','none')
       counter++;
       if(counter %2 !== 0){
         playerOneAttack()
