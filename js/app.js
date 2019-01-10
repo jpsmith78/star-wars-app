@@ -100,11 +100,11 @@ $(() => {
   // ================================================================
   const playerOneAttack = () => {
     if($('#player1_weapons').text().includes('blaster')){
-      console.log(playerOneBlaster.playerOneAttackEnemy());
+      playerOneBlaster.playerOneAttackEnemy();
     }else if($('#player1_weapons').text().includes('lightsaber')){
-      console.log(playerOneLightsaber.playerOneAttackEnemy());
+      playerOneLightsaber.playerOneAttackEnemy();
     }else if($('#player1_weapons').text().includes('crossbow')){
-      console.log(playerOneCrossbow.playerOneAttackEnemy());
+      playerOneCrossbow.playerOneAttackEnemy();
     }
   }
   //=================================================================
@@ -112,17 +112,18 @@ $(() => {
   // ================================================================
   const playerTwoAttack = () => {
     if($('#player2_weapons').text().includes('blaster')){
-      console.log(playerTwoBlaster.playerTwoAttackEnemy());
+      playerTwoBlaster.playerTwoAttackEnemy();
     }else if($('#player2_weapons').text().includes('lightsaber')){
-      console.log(playerTwoLightsaber.playerTwoAttackEnemy());
+      playerTwoLightsaber.playerTwoAttackEnemy();
     }else if($('#player2_weapons').text().includes('crossbow')){
-      console.log(playerTwoCrossbow.playerTwoAttackEnemy());
+      playerTwoCrossbow.playerTwoAttackEnemy();
     }
   }
   //=================================================================
   // <<<<<<<<<<<<<<<<<<<<<PLAYER 1 WINS FUNCTION>>>>>>>>>>>>>>>>>>>
   // ================================================================
   const playerOneWins = () => {
+    $('#attack').off('click')
     $('#winner').empty();
     $('#winner').append($('#player1_card').text())
     $('#winner').append($('<button>').text('Play Again?').attr('id','restart_button'))
@@ -133,19 +134,24 @@ $(() => {
   // <<<<<<<<<<<<<<<<<<<<<PLAYER 2 WINS FUNCTION>>>>>>>>>>>>>>>>>>>
   // ================================================================
   const playerTwoWins = () => {
+    $('#attack').off('click')
     $('#winner').empty();
     $('#winner').append($('#player2_card').text())
     $('#winner').append($('<button>').text('Play Again?').attr('id','restart_button'))
-    $('#restart_button').on('click',() => {
-      console.log('hi');
-    })
+    $('#restart_button').on('click',restart);
   }
   //=================================================================
   // <<<<<<<<<<<<<<<<<<<<<RESTART >>>>>>>>>>>>>>>>>>>
   // ================================================================
   const restart = () => {
+    $('#battle_stats').empty();
+    $('#hitpoint_report').empty();
+    $('#winner').empty();
     $('#player1_card').empty();
     $('#player2_card').empty();
+    $('#player1_weapons').empty();
+    $('#player2_weapons').empty();
+
   }
   //=================================================================
   // <<<<<<<<<<<<<<<<<<<<<WEAPONS FUNCTIONS>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -161,7 +167,7 @@ $(() => {
   }
   const getCrossBowPlayer1 = () => {
     $('#player1_weapons').empty();
-    $('#player1_weapons').append(playerOneCrossbow.name+': hitpoints:'+playerOneCrossbow.hitpoints+' attackpoints:'+crossbow.attackpoints+' accuracy:' +playerOneCrossbow.accuracy);
+    $('#player1_weapons').append(playerOneCrossbow.name+': hitpoints:'+playerOneCrossbow.hitpoints+' attackpoints:'+playerOneCrossbow.attackpoints+' accuracy:' +playerOneCrossbow.accuracy);
   }
   //and player 2 weapon card>>>>>>>>>>>>>>>>>>>>>>>>
   const getBlasterPlayer2 = () => {
@@ -199,6 +205,7 @@ $(() => {
     //use if else statemtn to push weapon data into player1 weapons card
         if (radioValue2 === 'blaster') {
         getBlasterPlayer2();
+        $()
       } else if(radioValue2 === 'lightsaber'){
         getLightsaberPlayer2();
       } else if (radioValue2 === 'crossbow') {
@@ -290,7 +297,6 @@ $(() => {
     //create vent listener for attack button
     $('#attack').on('click',() => {
       counter++;
-      console.log(counter);
       if(counter %2 !== 0){
         playerOneAttack()
       } else{
