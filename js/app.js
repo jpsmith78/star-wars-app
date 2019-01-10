@@ -17,25 +17,26 @@ $(() => {
     //==========================================================
     playerOneAttackEnemy(enemy){
       $('#battle_stats').empty();
+      $('#hitpoint_report').empty();
       if(Math.random() <= this.accuracy){
           $('#battle_stats').append($('#player1_card').text()+' has successfully used his '+[this.name]+' against '+($('#player2_card').text()));
           //make if statement to determine the hitpoints of the enemy and subtract attackpoint from that
           if($('#player2_weapons').text().includes('blaster')){
-            $('#battle_stats').append($('#player2_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player2_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }else if ($('#player2_weapons').text().includes('lightsaber')){
-            $('#battle_stats').append($('#player2_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player2_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }else if ($('#player2_weapons').text().includes('crossbow')){
-            $('#battle_stats').append($('#player2_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player2_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }
         }else{
           $('#battle_stats').append($('#player1_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player2_card').text()));
           //make if statement to determine the hitpoints of the enemy
           if($('#player2_weapons').text().includes('blaster')){
-            $('#battle_stats').append($('#player2_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player2_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
           }else if ($('#player2_weapons').text().includes('lightsaber')){
-            $('#battle_stats').append($('#player2_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player2_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
           }else if ($('#player2_weapons').text().includes('crossbow')){
-            $('#battle_stats').append($('#player2_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player2_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
           }
         }
       }
@@ -44,25 +45,26 @@ $(() => {
     //==========================================================
     playerTwoAttackEnemy(enemy){
       $('#battle_stats').empty();
+        $('#hitpoint_report').empty();
       if(Math.random()<= this.accuracy){
           $('#battle_stats').append($('#player2_card').text()+' has successfully used his '+[this.name]+' against '+($('#player1_card').text())+' for '+[this.attackpoints]+' damage');
           //make if statement to determine the hitpoints of the enemy and subtract attackpoint from that
           if($('#player1_weapons').text().includes('blaster')){
-            $('#battle_stats').append($('#player1_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player1_card').text()+' has '+[blaster.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }else if ($('#player1_weapons').text().includes('lightsaber')){
-            $('#battle_stats').append($('#player1_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player1_card').text()+' has '+[lightsaber.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }else if ($('#player1_weapons').text().includes('crossbow')){
-            $('#battle_stats').append($('#player1_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player1_card').text()+' has '+[crossbow.hitpoints -= this.attackpoints]+' hitpoints remaining');
           }
         }else{
           $('#battle_stats').append($('#player2_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player1_card').text()));
           //make if statement to determine the hitpoints of the enemy
           if($('#player1_weapons').text().includes('blaster')){
-            $('#battle_stats').append($('#player1_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player1_card').text()+' has '+[blaster.hitpoints]+' hitpoints remaining');
           }else if ($('#player1_weapons').text().includes('lightsaber')){
-            $('#battle_stats').append($('#player1_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player1_card').text()+' has '+[lightsaber.hitpoints]+' hitpoints remaining');
           }else if ($('#player1_weapons').text().includes('crossbow')){
-            $('#battle_stats').append($('#player1_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
+            $('#hitpoint_report').append($('#player1_card').text()+' has '+[crossbow.hitpoints]+' hitpoints remaining');
           }
         }
       }

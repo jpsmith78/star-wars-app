@@ -46,7 +46,18 @@ footer > h3 {
   margin: 5px auto;
   width: 40%
 }
-#battle_stats, #winner {
+#play_game {
+  height: 200px;
+  width: 70%;
+  margin: auto;
+}
+#battle_stats, #hitpoint_report {
+  height: 70px;
+  width: 40%;
+  margin: auto;
+}
+
+#winner {
   height: 50px;
   width: 200px;
   margin: auto;
