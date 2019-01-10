@@ -4,19 +4,22 @@
 body{
   text-align: center;
 }
+/* ========================================================
+<<<<<<<<<<<<<<<<<<<<HEADER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+======================================================== */
 header > h1,p {
   width: 80%;
   margin: 5px auto;
   padding: 10px;
 }
-#upper_container, #lower_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  height: 150px;
-  margin: auto;
+p {
+  background: black;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
 }
+/* ========================================================
+<<<<<<<<<<<<<<<<<<<<CAROUSEL>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+======================================================== */
 #carousel_container {
   display: flex;
   justify-content: center;
@@ -30,19 +33,44 @@ header > h1,p {
   width: 120px;
 }
 .carousel_card, .player_card, .weapon_card {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   margin: auto;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5%;
+
 }
 .carousel_card {
   display: none;
 }
 .button{
   margin: auto;
-
 }
-footer > h3 {
+/* ========================================================
+<<<<<<<<<<<<<<<<<<<<UPPER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
+======================================================== */
+#upper_container, #lower_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 200px;
+  margin: auto;
+}
+.player_card, .weapon_card {
+  background: gray;
+}
+/* ========================================================
+<<<<<<<<<<<<<<<<<<<<LOWER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
+======================================================== */
+
+/* ========================================================
+<<<<<<<<<<<<<<<<<<<<GAME>>>>>>>>>>>>>>>>>>>>>>>>>
+======================================================== */
+#game > h3 {
   margin: 5px auto;
   width: 40%
 }
@@ -56,9 +84,15 @@ footer > h3 {
   width: 40%;
   margin: auto;
 }
-
 #winner {
-  height: 50px;
-  width: 200px;
+  height: 100px;
+  width: 40%;
   margin: auto;
+}
+/* ========================================================
+<<<<<<<<<<<<<<<<<<<<FOOTER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+======================================================== */
+footer > h4 {
+  margin: 5px auto;
+  width: 40%
 }
