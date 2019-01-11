@@ -42,9 +42,18 @@ header > p {
   margin: auto;
   background-image: url('https://i.imgur.com/WVTcxk5.jpg?1');
   background-size: 75%;
+}
+#upper_container {
   border: 4px solid #aaaaaa;
   box-shadow: 2px 2px #36454f;
+  border-radius: 10px 10px 0 0;
 }
+#lower_container {
+  border-left: 4px solid #aaaaaa;
+  border-right: 4px solid #aaaaaa;
+  box-shadow: 2px 2px #36454f;
+}
+
 
 #upper_top, #upper_bottom {
   display: flex;
@@ -58,10 +67,9 @@ header > p {
 #upper_container > h2, #lower_container > h2 {
   width: 60%;
   margin: 10px auto;
-  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
-  background-size: 15%;
-  color: #36454f;
-  text-shadow: 1px 1px 1px black;
+  background-image: url('https://i.imgur.com/2acKmzV.png');
+  background-size: 100%;
+  text-shadow: 2px 2px 2px black;
   border: 1px solid #36454f;
   box-shadow: 2px 2px #36454f;
   font-size: 26px;
@@ -108,9 +116,8 @@ header > p {
   margin: auto;
   height: 25%;
   width: 25%;
-  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
-  background-size: 30%;
-  color: #36454f;
+  background-image: url('https://i.imgur.com/2acKmzV.png');
+  background-size: 100%;
   font-weight: bold;
   text-shadow: 1px 1px black;
   border: 1px solid #36454f;
@@ -140,9 +147,8 @@ header > p {
 }
 #player1_form, #player2_form {
   padding: 1%;
-  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
-  background-size: 40%;
-  color: #36454f;
+  background-image: url('https://i.imgur.com/2acKmzV.png');
+  background-size: 100%;
   text-shadow: 1px 1px 1px black;
   border: 1px solid #36454f;
   box-shadow: 2px 2px #36454f;
@@ -164,15 +170,15 @@ input:hover {
   background-size: 100%;
   margin: auto;
   width: 90%;
-  border: 2px solid #36454f;
+  border: 4px solid #aaaaaa;
   box-shadow: 2px 2px #36454f;
+  border-radius: 0px 0px 10px 10px;
 }
 #game > h2 {
   margin: 20px auto;
   width: 40%;
-  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
-  background-size: 10%;
-  color: #36454f;
+  background-image: url('https://i.imgur.com/2acKmzV.png');
+  background-size: 100%;
   text-shadow: 1px 1px 1px black;
   border: 1px solid #36454f;
   box-shadow: 2px 2px #36454f;
@@ -207,9 +213,9 @@ input:hover {
   width: 63%;
 }
 #attack, #restart {
-  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
-  background-size: 30%;
-  color: #36454f;
+  background-image: url('https://i.imgur.com/2acKmzV.png');
+  background-size: 100%;
+  color: #feda4a;
   font-weight: bold;
   text-shadow: 1px 1px black;
   border: 1px solid #36454f;

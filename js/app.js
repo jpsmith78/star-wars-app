@@ -160,13 +160,15 @@ $(() => {
     playerTwoLightsaber.hitpoints = 40;
     playerTwoCrossbow.hitpoints = 50;
     $('#attack').on('click',() => {
-      $('#player1_form').css('display','none')
-      $('#player2_form').css('display','none')
-      counter++;
-      if(counter %2 !== 0){
-        playerOneAttack()
-      } else{
-        playerTwoAttack()
+      if(($('#player1_card').text()!== '')&&($('#player2_card').text()!=='')&&($('#player1_weapons').text()!== '')&&($('#player2_weapons').text()!== '')){
+        $('#player1_form').css('display','none')
+        $('#player2_form').css('display','none')
+        counter++;
+        if(counter %2 !== 0){
+          playerOneAttack()
+        } else{
+          playerTwoAttack()
+        }
       }
     })
   }
@@ -300,7 +302,7 @@ $(() => {
       //=========================================================
       //make event handler for player card to move a carousel div to it
       $('.player_card').on('click',(event) => {
-        if($(event.target).text()==''){
+        if($(event.target).text()===''){
           $(event.target).append($('#carousel_divs').children().eq(currentDivIndex).clone())
         }
       })
@@ -313,13 +315,15 @@ $(() => {
     let counter = 0;
     //create vent listener for attack button
     $('#attack').on('click',() => {
-      $('#player1_form').css('display','none')
-      $('#player2_form').css('display','none')
-      counter++;
-      if(counter %2 !== 0){
-        playerOneAttack()
-      } else{
-        playerTwoAttack()
+      if(($('#player1_card').text()!== '')&&($('#player2_card').text()!=='')&&($('#player1_weapons').text()!== '')&&($('#player2_weapons').text()!== '')){
+        $('#player1_form').css('display','none')
+        $('#player2_form').css('display','none')
+        counter++;
+        if(counter %2 !== 0){
+          playerOneAttack()
+        } else{
+          playerTwoAttack()
+        }
       }
     })
 
