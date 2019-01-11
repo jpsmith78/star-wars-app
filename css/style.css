@@ -1,31 +1,41 @@
-*{
-  border:2px solid gold;
-}
+
 body{
   text-align: center;
   background: black;
   color: #feda4a;
   font-family: 'Pathway Gothic One', sans-serif;
+  background-image: url('https://i.imgur.com/ieiDLHg.jpg');
+  background-size: 100%;
 }
+
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<HEADER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 header > h1,p {
   width: 80%;
   margin: 5px auto;
-  padding: 10px;
-}
+  /* found this transformation in css tricks */
+  transform:perspective(1000px)rotateX(45deg);
+  }
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<UPPER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
-#upper_container, #lower_container, #game {
+#upper_container, #lower_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 90%;
   height: 400px;
   margin: auto;
   flex-wrap: wrap;
+  background-image: url('https://i.imgur.com/WVTcxk5.jpg');
+  background-size: 100%
 }
 
 #upper_top, #upper_bottom {
@@ -37,21 +47,20 @@ header > h1,p {
   margin: auto;
   flex-direction: row;
 }
-.player_card, .weapon_card {
-  background: gray;
+#upper_container > h2, #lower_container > h2 {
+  width: 40%;
+  margin: 5px auto;
 }
-#upper_container > h2 {
-  margin:  auto;
-}
-.player_card, .weapon_card {
-  height: 150px;
-  width: 150px;
+.player_card, .weapon_card, #carousel_divs {
+  height: 125px;
+  width: 125px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
   border-radius: 5%;
+  background-image: url('https://i.imgur.com/ieiDLHg.jpg');
+  background-size: 100%;
 
 }
 /* ========================================================
@@ -66,16 +75,26 @@ header > h1,p {
   margin: auto;
 }
 #carousel_divs {
-  height: 150px;
-  width: 150px;
+  height: 125px;
+  width: 125px;
 }
 
 .carousel_card {
   display: none;
-
 }
 .button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
+  height: 25%;
+  width: 25%;
+  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
+  background-size: 100%;
+  color: #36454f;
+  text-shadow: 1px 1px black;
+  border: 1px solid #36454f;
+  box-shadow: 2px 2px #36454f;
 }
 
 /* ========================================================
@@ -83,10 +102,6 @@ header > h1,p {
 ======================================================== */
 #lower_container {
   flex-wrap: wrap;
-}
-#lower_container > h2 {
-  width: 100%;
-  margin: 5px;
 }
 #lower_top, #lower_bottom {
   display: flex;
@@ -102,38 +117,47 @@ header > h1,p {
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<GAME>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
-#game > h3 {
-  margin: 5px auto;
+#game {
+  display: flex;
+  height: 450px;
+  flex-flow: column;
+  justify-content: space-around;
+  background-image: url('https://i.imgur.com/WVTcxk5.jpg');
+  background-size: 100%;
+  margin: auto;
   width: 90%;
 }
-#play_game {
+#game > h2 {
+  margin: 0 auto;
+  width: 40%;
+}
+#play_game, #battle_stats, #hitpoint_report, #winner{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
+}
+#play_game {
   height: 200px;
   width: 70%;
-  margin: auto;
   flex-direction: column;
 }
 #battle_stats, #hitpoint_report {
   height: 70px;
-  width: 40%;
-  margin: auto;
+  width: 60%;
+  background-image: url('https://i.imgur.com/ieiDLHg.jpg');
+  background-size: 100%;
 }
 #winner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
   height: 100px;
   width: 40%;
-  margin: auto;
-  padding: 5%;
+  background-image: url('https://i.imgur.com/ieiDLHg.jpg');
+  background-size: 100%;
 }
 #attack, #restart {
   height: 25px;
   width: 75px;
-
 }
 
 /* ========================================================
@@ -142,7 +166,4 @@ header > h1,p {
 footer > h4 {
   margin: 5px auto;
   width: 40%
-}
-#game {
-  height: 600px;
 }
