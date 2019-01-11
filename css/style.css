@@ -28,14 +28,16 @@ header > h1,p {
 ======================================================== */
 #upper_container, #lower_container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
   width: 90%;
-  height: 400px;
+  height: 450px;
   margin: auto;
-  flex-wrap: wrap;
   background-image: url('https://i.imgur.com/WVTcxk5.jpg');
-  background-size: 100%
+  background-size: 100%;
+  border: 2px solid #36454f;
+  box-shadow: 2px 2px #36454f;
 }
 
 #upper_top, #upper_bottom {
@@ -44,12 +46,18 @@ header > h1,p {
   align-items: center;
   width: 95%;
   height: 40%;
-  margin: auto;
+  margin: 0 auto;
   flex-direction: row;
 }
 #upper_container > h2, #lower_container > h2 {
-  width: 40%;
-  margin: 5px auto;
+  width: 60%;
+  margin: 10px auto;
+  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
+  background-size: 10%;
+  color: #36454f;
+  text-shadow: 1px 1px 1px black;
+  border: 1px solid #36454f;
+  box-shadow: 2px 2px #36454f;
 }
 .player_card, .weapon_card, #carousel_divs {
   height: 125px;
@@ -92,7 +100,7 @@ header > h1,p {
   background-image: url('https://i.imgur.com/TUXkxqx.jpg');
   background-size: 100%;
   color: #36454f;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 1px 1px black;
   border: 1px solid #36454f;
   box-shadow: 2px 2px #36454f;
 }
@@ -100,9 +108,6 @@ header > h1,p {
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<LOWER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
-#lower_container {
-  flex-wrap: wrap;
-}
 #lower_top, #lower_bottom {
   display: flex;
   justify-content: space-around;
@@ -113,7 +118,14 @@ header > h1,p {
   flex-direction: row;
   margin: 0 auto;
 }
-
+#player1_form, #player2_form {
+  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
+  background-size: 25%;
+  color: #36454f;
+  text-shadow: 1px 1px 1px black;
+  border: 1px solid #36454f;
+  box-shadow: 2px 2px #36454f;
+}
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<GAME>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
@@ -126,10 +138,18 @@ header > h1,p {
   background-size: 100%;
   margin: auto;
   width: 90%;
+  border: 2px solid #36454f;
+  box-shadow: 2px 2px #36454f;
 }
 #game > h2 {
   margin: 0 auto;
   width: 40%;
+  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
+  background-size: 20%;
+  color: #36454f;
+  text-shadow: 1px 1px 1px black;
+  border: 1px solid #36454f;
+  box-shadow: 2px 2px #36454f;
 }
 #play_game, #battle_stats, #hitpoint_report, #winner{
   display: flex;
