@@ -16,7 +16,8 @@
     <div id="outer_container">
       <header>
         <h1>Star Wars Battle!</h1>
-        <p>Welcomne to Star Wars Battle!  To Play the game, select which two characters you would like from the carousel at the top of the screen.  When you find one that you like, simply click</p>
+        <p>Welcomne to Star Wars Battle!  To Play the game, scroll through the list of characters at the top and click on the character panes when yuo find two that you like.  Then select a weapon for each player from the option below.</p>
+        <p>Now You're ready to play! Keep clicking the attack button to alternate attacks between player one and player two. When a players hitpoints has reached zero, a win message will pop down at the bottom and you will be given the option to play again! Fun!</p>
       </header>
       <div id="upper_container">
         <h2>Choose Your Character</h2>
@@ -28,8 +29,15 @@
           </div>
         </div>
         <div id="upper_bottom">
-          <div class="player_card" id="player1_card"></div>
-          <div class="player_card" id ="player2_card"></div>
+          <div class="player_container">
+            <h3>Player 1</h3>
+            <div class="player_card" id="player1_card"></div>
+          </div>
+          <div class="player_container">
+            <h3>Player 2</h3>
+            <div class="player_card" id ="player2_card"></div>
+          </div>
+
         </div>
       </div>
       <div id="lower_container">

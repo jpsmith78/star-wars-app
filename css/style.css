@@ -18,7 +18,7 @@ header {
 }
 header > h1,p {
   width: 80%;
-  margin: 5px auto;
+  margin: 2% 20%;
   /* found this transformation in css tricks */
   transform:perspective(1000px)rotateX(45deg);
   }
@@ -28,6 +28,7 @@ header > h1 {
 header > p {
   font-size: 22px;
   margin-top: -20px;
+  text-align: justify;
 }
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<UPPER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -35,10 +36,10 @@ header > p {
 #upper_container, #lower_container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   width: 90%;
-  height: 450px;
+  height: 500px;
   margin: auto;
   background-image: url('https://i.imgur.com/WVTcxk5.jpg?1');
   background-size: 75%;
@@ -53,20 +54,32 @@ header > p {
   border-right: 4px solid #aaaaaa;
   box-shadow: 2px 2px #36454f;
 }
-
-
 #upper_top, #upper_bottom {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 95%;
-  height: 40%;
   margin: 0 auto;
   flex-direction: row;
 }
-#upper_container > h2, #lower_container > h2 {
+#upper_top{
+  height: 35%;
+}
+#upper_bottom {
+  height: 45%;
+}
+.player_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  height: 80%;
+  width: 35%;
+}
+h2 {
   width: 60%;
-  margin: 10px auto;
+  margin: 20px auto;
   background-image: url('https://i.imgur.com/2acKmzV.png');
   background-size: 100%;
   text-shadow: 2px 2px 2px black;
@@ -75,9 +88,21 @@ header > p {
   font-size: 26px;
   border-radius: 3px;
 }
+.player_container > h3 {
+  width: 90%;
+  margin: 10px auto;
+  background-image: url('https://i.imgur.com/2acKmzV.png');
+  background-size: 100%;
+  text-shadow: 2px 2px 2px black;
+  border: 1px solid #36454f;
+  box-shadow: 2px 2px #36454f;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
 .player_card, .weapon_card, #carousel_divs {
-  height: 120px;
-  width: 120px;
+  height: 125px;
+  width: 125px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -101,11 +126,6 @@ header > p {
   height: 150px;
   margin: auto;
 }
-#carousel_divs {
-  height: 125px;
-  width: 125px;
-}
-
 .carousel_card {
   display: none;
 }
@@ -115,7 +135,7 @@ header > p {
   align-items: center;
   margin: auto;
   height: 25%;
-  width: 25%;
+  width: 120px;
   background-image: url('https://i.imgur.com/2acKmzV.png');
   background-size: 100%;
   font-weight: bold;
@@ -174,17 +194,7 @@ input:hover {
   box-shadow: 2px 2px #36454f;
   border-radius: 0px 0px 10px 10px;
 }
-#game > h2 {
-  margin: 20px auto;
-  width: 40%;
-  background-image: url('https://i.imgur.com/2acKmzV.png');
-  background-size: 100%;
-  text-shadow: 1px 1px 1px black;
-  border: 1px solid #36454f;
-  box-shadow: 2px 2px #36454f;
-  font-size: 26px;
-  border-radius: 2px;
-}
+
 #play_game {
   display: flex;
   justify-content: center;
