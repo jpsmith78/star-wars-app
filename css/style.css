@@ -71,11 +71,11 @@ header > p {
 .player_container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 5px auto;
-  height: 80%;
-  width: 35%;
+  height: 85%;
+  width: 50%;
 }
 h2 {
   width: 60%;
@@ -89,8 +89,8 @@ h2 {
   border-radius: 3px;
 }
 .player_container > h3 {
-  width: 90%;
-  margin: 10px auto;
+  width: 150px;
+  margin: 0 auto;
   background-image: url('https://i.imgur.com/2acKmzV.png');
   background-size: 100%;
   text-shadow: 2px 2px 2px black;
@@ -103,7 +103,7 @@ h2 {
 .player_card, .weapon_card, #carousel_divs {
   height: 125px;
   width: 125px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
