@@ -7,7 +7,6 @@ body{
   background-image: url('https://i.imgur.com/ieiDLHg.jpg');
   background-size: 100%;
 }
-
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<HEADER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
@@ -23,6 +22,13 @@ header > h1,p {
   /* found this transformation in css tricks */
   transform:perspective(1000px)rotateX(45deg);
   }
+header > h1 {
+  font-size: 40px;
+}
+header > p {
+  font-size: 22px;
+  margin-top: -20px;
+}
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<UPPER CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
@@ -34,9 +40,9 @@ header > h1,p {
   width: 90%;
   height: 450px;
   margin: auto;
-  background-image: url('https://i.imgur.com/WVTcxk5.jpg');
-  background-size: 100%;
-  border: 2px solid #36454f;
+  background-image: url('https://i.imgur.com/WVTcxk5.jpg?1');
+  background-size: 75%;
+  border: 4px solid #aaaaaa;
   box-shadow: 2px 2px #36454f;
 }
 
@@ -53,23 +59,28 @@ header > h1,p {
   width: 60%;
   margin: 10px auto;
   background-image: url('https://i.imgur.com/TUXkxqx.jpg');
-  background-size: 10%;
+  background-size: 15%;
   color: #36454f;
   text-shadow: 1px 1px 1px black;
   border: 1px solid #36454f;
   box-shadow: 2px 2px #36454f;
+  font-size: 26px;
+  border-radius: 3px;
 }
 .player_card, .weapon_card, #carousel_divs {
-  height: 125px;
-  width: 125px;
+  height: 120px;
+  width: 120px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5%;
+  border-radius: 10px;
   background-image: url('https://i.imgur.com/ieiDLHg.jpg');
-  background-size: 100%;
-
+  background-size: cover;
+  font-size: 20px;
+  padding: 2%;
+  border: 4px solid #aaaaaa;
+  box-shadow: 2px 2px #36454f;
 }
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<CAROUSEL>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -98,11 +109,20 @@ header > h1,p {
   height: 25%;
   width: 25%;
   background-image: url('https://i.imgur.com/TUXkxqx.jpg');
-  background-size: 100%;
+  background-size: 30%;
   color: #36454f;
-  text-shadow: 1px 1px 1px black;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
   border: 1px solid #36454f;
   box-shadow: 2px 2px #36454f;
+  font-size: 20px;
+  border-radius: 2px;
+}
+.player_card:hover, .button:hover {
+  cursor: pointer;
+}
+.button:hover{
+  background: rgba(0,255,0,.5);
 }
 
 /* ========================================================
@@ -119,22 +139,28 @@ header > h1,p {
   margin: 0 auto;
 }
 #player1_form, #player2_form {
+  padding: 1%;
   background-image: url('https://i.imgur.com/TUXkxqx.jpg');
-  background-size: 25%;
+  background-size: 40%;
   color: #36454f;
   text-shadow: 1px 1px 1px black;
   border: 1px solid #36454f;
   box-shadow: 2px 2px #36454f;
+  font-size: 18px;
+}
+input:hover {
+  cursor: pointer;
 }
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<GAME>>>>>>>>>>>>>>>>>>>>>>>>>
 ======================================================== */
 #game {
   display: flex;
-  height: 450px;
-  flex-flow: column;
-  justify-content: space-around;
-  background-image: url('https://i.imgur.com/WVTcxk5.jpg');
+  height: 700px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://i.imgur.com/WVTcxk5.jpg?1');
   background-size: 100%;
   margin: auto;
   width: 90%;
@@ -142,43 +168,63 @@ header > h1,p {
   box-shadow: 2px 2px #36454f;
 }
 #game > h2 {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 40%;
   background-image: url('https://i.imgur.com/TUXkxqx.jpg');
-  background-size: 20%;
+  background-size: 10%;
   color: #36454f;
   text-shadow: 1px 1px 1px black;
   border: 1px solid #36454f;
   box-shadow: 2px 2px #36454f;
-}
-#play_game, #battle_stats, #hitpoint_report, #winner{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
+  font-size: 26px;
+  border-radius: 2px;
 }
 #play_game {
-  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 350px;
   width: 70%;
   flex-direction: column;
 }
-#battle_stats, #hitpoint_report {
-  height: 70px;
-  width: 60%;
+#battle_stats, #hitpoint_report, #winner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 90%;
   background-image: url('https://i.imgur.com/ieiDLHg.jpg');
-  background-size: 100%;
+  background-size: cover;
+  margin: 20px auto;
+  padding: 2px;
+  border: 4px solid #aaaaaa;
+  box-shadow: 2px 2px #36454f;
+  border-radius: 3px;
 }
 #winner {
-  flex-direction: column;
-  height: 100px;
-  width: 40%;
-  background-image: url('https://i.imgur.com/ieiDLHg.jpg');
-  background-size: 100%;
+  width: 63%;
 }
 #attack, #restart {
-  height: 25px;
-  width: 75px;
+  background-image: url('https://i.imgur.com/TUXkxqx.jpg');
+  background-size: 30%;
+  color: #36454f;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
+  border: 1px solid #36454f;
+  box-shadow: 2px 2px #36454f;
+  font-size: 18px;
+  height: 60px;
+  width: 160px;
+  margin: 30px auto 0 auto;
+  border-radius: 2px;
 }
+#attack:hover, #restart:hover {
+  background: rgba(0,255,0,.5);
+  cursor: pointer;
+}
+
 
 /* ========================================================
 <<<<<<<<<<<<<<<<<<<<FOOTER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
