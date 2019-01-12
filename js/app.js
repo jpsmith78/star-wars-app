@@ -39,14 +39,7 @@ $(() => {
           }
         }else{
           $('#battle_stats').append($('#player1_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player2_card').text()));
-          //make if statement to determine the hitpoints of the enemy
-          if($('#player2_weapons').text().includes('blaster')){
-            $('#hitpoint_report').append($('#player2_card').text()+' has '+[playerOneBlaster.hitpoints]+' hitpoints remaining');
-          }else if ($('#player2_weapons').text().includes('lightsaber')){
-            $('#hitpoint_report').append($('#player2_card').text()+' has '+[playerOneLightsaber.hitpoints]+' hitpoints remaining');
-          }else if ($('#player2_weapons').text().includes('crossbow')){
-            $('#hitpoint_report').append($('#player2_card').text()+' has '+[playerOneCrossbow.hitpoints]+' hitpoints remaining');
-          }
+          $('#hitpoint_report').append($('#player1_card').text()+' did not use the force');
         }
       }
     //=========================================================
@@ -76,14 +69,7 @@ $(() => {
           }
         }else{
           $('#battle_stats').append($('#player2_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player1_card').text()));
-          //make if statement to determine the hitpoints of the enemy
-          if($('#player1_weapons').text().includes('blaster')){
-            $('#hitpoint_report').append($('#player1_card').text()+' has '+[playerOneBlaster.hitpoints]+' hitpoints remaining');
-          }else if ($('#player1_weapons').text().includes('lightsaber')){
-            $('#hitpoint_report').append($('#player1_card').text()+' has '+[playerOneLightsaber.hitpoints]+' hitpoints remaining');
-          }else if ($('#player1_weapons').text().includes('crossbow')){
-            $('#hitpoint_report').append($('#player1_card').text()+' has '+[playerOneCrossbow.hitpoints]+' hitpoints remaining');
-          }
+          $('#hitpoint_report').append($('#player2_card').text()+' did not use the force');
         }
       }
     }
