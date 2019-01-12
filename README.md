@@ -45,4 +45,5 @@ There will be more small changes still to come.
 (https://jpsmith78.github.io/star-wars-app/ "star wars battle")
 
 ### Unsolved Problems
+
 I'm sure that there's a dryer way to make this game work without using so many if else statements, but I couldn't quite figure out how with my weapons and character separated as they are.  The h1 and p in my header also pull apart in a way that I couldn't solve when the screen gets narrow.
