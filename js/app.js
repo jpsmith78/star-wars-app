@@ -243,7 +243,6 @@ $(() => {
       //create current div counter variable for carousel
       let currentDivIndex = 0;
 
-      let randomNum = Math.floor(Math.random()*9)
       //count how many divs are in the carousel
       const numberOfDivs = $('#carousel_divs').children().length-1;
       // console.log(numberOfDivs);
