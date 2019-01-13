@@ -39,7 +39,7 @@ $(() => {
           }
         }else{
           $('#battle_stats').append($('#player1_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player2_card').text()));
-          $('#hitpoint_report').append($('#player1_card').text()+' did not use the force');
+          $('#hitpoint_report').append($('#player1_card').text()+" didn't use the force.  What a Jar Jar move!");
         }
       }
     //=========================================================
@@ -69,7 +69,7 @@ $(() => {
           }
         }else{
           $('#battle_stats').append($('#player2_card').text()+' has unsuccessfully used his '+[this.name]+' against '+($('#player1_card').text()));
-          $('#hitpoint_report').append($('#player2_card').text()+' did not use the force');
+          $('#hitpoint_report').append($('#player2_card').text()+" didn't use the force.  What a Jar Jar move!");
         }
       }
     }
@@ -232,7 +232,7 @@ $(() => {
         //create carousel card div
         const $carousel_card = $('<div>').addClass('carousel_card')
         //add people names to carousel cards
-        $($carousel_card).text(data.results[i].name).css('background-image','url("https://i.imgur.com/1DRRnHD.jpg")').css('background-size','cover')
+        $($carousel_card).text(data.results[i].name).css('background-image', "url('images/"+i+".jpg')").css('background-size','cover')
         //append carousel card to carousel images div
         $('#carousel_divs').append($carousel_card)
       }
