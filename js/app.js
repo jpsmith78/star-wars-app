@@ -109,8 +109,8 @@ $(() => {
   // <<<<<<<<<<<<<<<<<<<<<PLAYER 1 WINS FUNCTION>>>>>>>>>>>>>>>>>>>
   // ================================================================
   const playerOneWins = () => {
+    $('#attack').text('Game Over')
     $('#attack').off('click');
-    $('#attack').text('Game Over');
     $('#winner').empty();
     $('#winner').append('The Winner is '+($('#player1_card').text())+'!');
     $('#winner').append($('<button>').text('Play Again?').attr('id','restart'));
@@ -121,8 +121,8 @@ $(() => {
   // <<<<<<<<<<<<<<<<<<<<<PLAYER 2 WINS FUNCTION>>>>>>>>>>>>>>>>>>>
   // ================================================================
   const playerTwoWins = () => {
+    $('#attack').text('Game Over')
     $('#attack').off('click');
-    $('#attack').text('Game Over');
     $('#winner').empty();
     $('#winner').append('The Winner is '+($('#player2_card').text())+'!');
     $('#winner').append($('<button>').text('Play Again?').attr('id','restart'));
@@ -148,17 +148,20 @@ $(() => {
     playerTwoBlaster.hitpoints = 60;
     playerTwoLightsaber.hitpoints = 40;
     playerTwoCrossbow.hitpoints = 50;
+    counter = 0;
     $('#attack').on('click',() => {
       if(($('#player1_card').text()!== '')&&($('#player2_card').text()!=='')&&($('#player1_weapons').text()!== '')&&($('#player2_weapons').text()!== '')){
         $('#player1_form').css('display','none')
         $('#player2_form').css('display','none')
         counter++;
         if(counter %2 !== 0){
-          playerOneAttack()
           $('#attack').text('Player Two Attack')
+          playerOneAttack()
+
         } else{
-          playerTwoAttack()
           $('#attack').text('Player One Attack')
+          playerTwoAttack()
+
         }
       }
     })
@@ -310,11 +313,13 @@ $(() => {
         $('#player2_form').css('display','none')
         counter++;
         if(counter %2 !== 0){
-          playerOneAttack()
           $('#attack').text('Player Two Attack')
+          playerOneAttack()
+
         } else{
           $('#attack').text('Player One Attack')
           playerTwoAttack()
+
         }
       }
     })
