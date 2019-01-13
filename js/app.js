@@ -109,10 +109,11 @@ $(() => {
   // <<<<<<<<<<<<<<<<<<<<<PLAYER 1 WINS FUNCTION>>>>>>>>>>>>>>>>>>>
   // ================================================================
   const playerOneWins = () => {
-    $('#attack').off('click')
+    $('#attack').off('click');
+    $('#attack').text('Game Over');
     $('#winner').empty();
-    $('#winner').append('The Winner is '+($('#player1_card').text())+'!')
-    $('#winner').append($('<button>').text('Play Again?').attr('id','restart'))
+    $('#winner').append('The Winner is '+($('#player1_card').text())+'!');
+    $('#winner').append($('<button>').text('Play Again?').attr('id','restart'));
     $('#restart').on('click',restart);
 
   }
@@ -120,16 +121,18 @@ $(() => {
   // <<<<<<<<<<<<<<<<<<<<<PLAYER 2 WINS FUNCTION>>>>>>>>>>>>>>>>>>>
   // ================================================================
   const playerTwoWins = () => {
-    $('#attack').off('click')
+    $('#attack').off('click');
+    $('#attack').text('Game Over');
     $('#winner').empty();
-    $('#winner').append('The Winner is '+($('#player2_card').text())+'!')
-    $('#winner').append($('<button>').text('Play Again?').attr('id','restart'))
+    $('#winner').append('The Winner is '+($('#player2_card').text())+'!');
+    $('#winner').append($('<button>').text('Play Again?').attr('id','restart'));
     $('#restart').on('click',restart);
   }
   //=================================================================
   // <<<<<<<<<<<<<<<<<<<<<RESTART >>>>>>>>>>>>>>>>>>>
   // ================================================================
   const restart = () => {
+    $('#attack').text('Player One Attack')
     $('#battle_stats').empty();
     $('#hitpoint_report').empty();
     $('#winner').empty();
@@ -152,8 +155,10 @@ $(() => {
         counter++;
         if(counter %2 !== 0){
           playerOneAttack()
+          $('#attack').text('Player Two Attack')
         } else{
           playerTwoAttack()
+          $('#attack').text('Player One Attack')
         }
       }
     })
@@ -306,7 +311,9 @@ $(() => {
         counter++;
         if(counter %2 !== 0){
           playerOneAttack()
+          $('#attack').text('Player Two Attack')
         } else{
+          $('#attack').text('Player One Attack')
           playerTwoAttack()
         }
       }
