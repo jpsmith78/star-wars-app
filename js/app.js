@@ -232,7 +232,7 @@ $(() => {
         //create carousel card div
         const $carousel_card = $('<div>').addClass('carousel_card')
         //add people names to carousel cards
-        $($carousel_card).text(data.results[i].name)
+        $($carousel_card).text(data.results[i].name).css('background-image','url("https://i.imgur.com/1DRRnHD.jpg")').css('background-size','cover')
         //append carousel card to carousel images div
         $('#carousel_divs').append($carousel_card)
       }
@@ -256,14 +256,14 @@ $(() => {
         if(currentDivIndex < numberOfDivs){
           currentDivIndex++
           //show next div
-          $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
+          $('#carousel_divs').children().eq(currentDivIndex).css('display','flex')
         } else {
           currentDivIndex = 0;
           //show next image
-          $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
+          $('#carousel_divs').children().eq(currentDivIndex).css('display','flex')
         }
       })
-      $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
+      $('#carousel_divs').children().eq(currentDivIndex).css('display','flex')
       //===========================================================
       //<<<<<<<<<<<<<<<<<<<<<<<<<<BACK BUTTON>>>>>>>>>>>>>>>>>>>>>>>
       //===============================================================
@@ -274,12 +274,12 @@ $(() => {
         if(currentDivIndex > 0){
           currentDivIndex--
           //show previous div
-          $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
+          $('#carousel_divs').children().eq(currentDivIndex).css('display','flex')
           //or return to zero
         } else {
           currentDivIndex = numberOfDivs;
           //show next image
-          $('#carousel_divs').children().eq(currentDivIndex).css('display','block')
+          $('#carousel_divs').children().eq(currentDivIndex).css('display','flex')
         }
       })
       //=========================================================
