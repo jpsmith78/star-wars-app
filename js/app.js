@@ -232,7 +232,7 @@ $(() => {
         //create carousel card div
         const $carousel_card = $('<div>').addClass('carousel_card')
         //add people names to carousel cards
-        $($carousel_card).text(data.results[i].name).css('background-image', "url('images/"+i+".jpg')").css('background-size','cover')
+        $($carousel_card).text(data.results[i].name).css('background-image', "url('images/"+i+".jpg')").css('background-size','cover').css('border-radius','5px')
         //append carousel card to carousel images div
         $('#carousel_divs').append($carousel_card)
       }
