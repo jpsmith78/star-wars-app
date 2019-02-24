@@ -1,5 +1,8 @@
 # star-wars-app
 
+
+[link to app](https://jpsmith78.github.io/star-wars-app/ "star wars battle")
+
 ### A Brief Overview
 
 Star Wars Battle is a head to head fighter game.  The player first chooses the character that they want by moving through a carousel of pictures and then clicking on the empty player pane when they find a character that they want to use.  
@@ -41,9 +44,6 @@ After setting most of the game logic, I turned my attention to the css.  I used 
 
 There will be more small changes still to come.
 
-### Link to Live Site
-
-(https://jpsmith78.github.io/star-wars-app/ "star wars battle")
 
 ### Unsolved Problems
 
