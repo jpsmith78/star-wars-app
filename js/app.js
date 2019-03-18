@@ -319,7 +319,6 @@ $(() => {
         } else{
           $('#attack').text('Player One Attack')
           playerTwoAttack()
-
         }
       }
     })
